@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Tool</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            background-color: #f4f6f8;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #3a7bd5;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            margin-left: 20px;
+        }
+
+        /* Container */
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 20%;
+            background-color: #edf2f4;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+        }
+
+        .sidebar li {
+            padding: 10px 0;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .project-form, .task-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-form input, .task-form input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .project-form button, .task-form button {
+            background-color: #3a7bd5;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Project and Task Lists */
+        .projects, .tasks {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project, .task {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .project h3, .task h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .project p, .task p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>Project Manager</h1>
+        <span>User Profile</span>
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li>Dashboard</li>
+                <li>Projects</li>
+                <li>Tasks</li>
+                <li>Team</li>
+                <li>Settings</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Project Form -->
+            <div class="project-form">
+                <h2>Add New Project</h2>
+                <input type="text" placeholder="Project Name">
+                <button>Add Project</button>
+            </div>
+
+            <!-- Project List -->
+            <div class="projects">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Website Redesign</h3>
+                    <p>Description: Redesigning the corporate website</p>
+                </div>
+                <div class="project">
+                    <h3>Mobile App Development</h3>
+                    <p>Description: Creating a new mobile app for customers</p>
+                </div>
+            </div>
+
+            <!-- Task Form -->
+            <div class="task-form">
+                <h2>Add New Task</h2>
+                <input type="text" placeholder="Task Title">
+                <button>Add Task</button>
+            </div>
+
+            <!-- Task List -->
+            <div class="tasks">
+                <h2>Tasks</h2>
+                <div class="task">
+                    <h4>Design Mockups</h4>
+                    <p>Status: In Progress</p>
+                </div>
+                <div class="task">
+                    <h4>Code Review</h4>
+                    <p>Status: Pending</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
